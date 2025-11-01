@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Three.js — 초록 잔디에 나무 한 그루</title>
+  <style>
+    html, body { height: 100%; margin: 0; background: #cfe9ff; color: #0b1020; font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", sans-serif; }
+    #app { position: fixed; inset: 0; display:block; }
+    .hud { position: fixed; left: 12px; bottom: 12px; padding: 10px 12px; background: rgba(255,255,255,.75); border: 1px solid rgba(0,0,0,.08); border-radius: 10px; backdrop-filter: blur(6px); }
+    .hud b { color: #0b6ce0; }
+    .hud small { display:block; opacity:.8 }
+    .tests { position: fixed; right: 12px; bottom: 12px; padding: 8px 10px; font-size: 12px; background: rgba(255,255,255,.75); border: 1px solid rgba(0,0,0,.08); border-radius: 10px; max-width: 42ch; line-height: 1.4; }
+    .tests .ok { color: #0a7f2e; }
+    .tests .fail { color: #b00020; }
+  </style>
+
+  <!-- Import Map: bare specifiers → CDN URLs -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <canvas id="app"></canvas>
+  <div class="hud">
+    <b>조작법</b>
+    <small>드래그: 회전 · 휠: 줌 · 우클릭/두손가락: 이동</small>
+  </div>
+  <div class="tests" id="tests">로딩 중…</div>
+
+  <script type="module", src="./main.js"></script>
+</body>
+</html>
